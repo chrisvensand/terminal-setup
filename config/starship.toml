@@ -1,0 +1,15 @@
+# git_status and cmd_duration are already enabled by starship's defaults —
+# git_status shows modified/staged/ahead-behind counts whenever there's
+# something to show, and cmd_duration shows "took Xs" for slow commands.
+# Only the python module needed changing below.
+
+[cmd_duration]
+min_time = 500  # show duration for anything over 0.5s (default is 2s)
+
+[python]
+# Only show python info when a venv/conda env is actually active,
+# instead of whenever a .py file / pyproject.toml / requirements.txt exists.
+detect_extensions = []
+detect_files = []
+detect_folders = []
+detect_env_vars = ["VIRTUAL_ENV", "CONDA_DEFAULT_ENV", "PYENV_VERSION"]

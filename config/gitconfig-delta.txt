@@ -1,0 +1,18 @@
+# Add to ~/.gitconfig (or run the equivalent `git config --global` commands below)
+
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+[merge]
+	conflictstyle = zdiff3
+
+# Equivalent commands:
+#   git config --global core.pager "delta"
+#   git config --global interactive.diffFilter "delta --color-only"
+#   git config --global delta.navigate true
+#   git config --global delta.side-by-side true
+#   git config --global merge.conflictstyle zdiff3
